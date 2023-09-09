@@ -56,9 +56,11 @@
         aria-label="Display the menu"
         class="menu md:hidden mt-1"
       />
+      
+      <transition name="fade-slide">
       <ul
-        v-if="mobileMenuOpen || linksVisible"
-        class="rounded-lg md:flex md:items-center z-10 md:z-auto md:static absolute bg-white w-full left-0 md:w-auto py-2 pl-9 md:opacity-100 md:rounded-none md:mt-0 mt-8"
+      v-if="mobileMenuOpen || linksVisible"
+      class="rounded-lg md:flex md:items-center z-10 md:z-auto md:static absolute bg-white w-full left-0 md:w-auto py-2 pl-9 md:opacity-100 md:rounded-none md:mt-0 mt-8"
       >
         <li class="mx-4 my-6 md:my-0">
           <a
@@ -96,6 +98,7 @@
           >
         </li>
       </ul>
+      </transition>
     </header>
   </div>
 </template>
@@ -129,6 +132,19 @@ onBeforeUnmount(() => {
 </script>
 
 <style scoped>
+
+.fade-slide-enter-active,
+.fade-slide-leave-active {
+  transition: all 0.5s ease-in;
+}
+
+.fade-slide-enter-from,
+.fade-slide-leave-to {
+  opacity: 0;
+  transform: translateY(-50px);
+  transition: transform 0.5s ease-in, opacity 0.3s ease-in;
+}
+
 .menu {
   --s: 30px; /* control the size */
   --c: black; /* the color */
