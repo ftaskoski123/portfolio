@@ -7,7 +7,7 @@
         <p class="text-3xl text-black dark:text-white">Tech Stack</p>
         <div class="hidden md:block mx-4 border-l   border-black dark:border-white h-16"></div>
         <div class="flex">
-          <img class="transition-transform duration-500 ease-in-out hover:scale-105k" src="https://skillicons.dev/icons?i=html,css" />
+          <img class="transition-transform duration-500 ease-in-out hover:scale-105" src="https://skillicons.dev/icons?i=html,css" />
           <img class="transition-transform duration-500 ease-in-out hover:scale-105 ml-8" src="https://skillicons.dev/icons?i=js,ts" />
           <img class="transition-transform duration-500 ease-in-out hover:scale-105 ml-8" src="https://skillicons.dev/icons?i=vue,firebase" />
           <img class="transition-transform duration-500 ease-in-out hover:scale-105 ml-8" src="https://skillicons.dev/icons?i=tailwind" />
