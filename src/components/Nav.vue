@@ -38,10 +38,9 @@
           >
         </li>
         <li class="mx-4 my-6 md:my-0">
-          <a
-            href="#"
-            class="hover:text-cyan-500 duration-500 focus:text-cyan-500"
-            >ABOUT</a
+          <router-link to="/about"
+            class="hover:text-cyan-500 cursor-pointer duration-500 focus:text-cyan-500"
+            >ABOUT</router-link
           >
         </li>
         <li class="mx-4 my-6 md:my-0">
@@ -148,6 +147,7 @@ onBeforeUnmount(() => {
 </script>
 
 <style scoped>
+
 .fade-slide-enter-active,
 .fade-slide-leave-active {
   transition: all 0.5s ease-in;

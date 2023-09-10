@@ -28,6 +28,6 @@ html.dark {
 
 body {
   @apply bg-custom-color dark:bg-custom-color-dark;
+  font-family: Poppins,sans-serif;
 }
 </style>
-<!-- dark:bg-black dark:via-gray-900 -->
