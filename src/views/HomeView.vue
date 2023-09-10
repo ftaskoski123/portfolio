@@ -1,28 +1,18 @@
 <template>
-
 <main>
+
+
 </main>
 
 
 
 </template>
 
-<script >
-export default {
-  data() {
-    return {
-      mobileMenuOpen: false,
-    };
-  },
-  methods: {
-    toggleMobileMenu() {
-      this.mobileMenuOpen = !this.mobileMenuOpen;
-    },
-  },
-};
+<script setup >
+
+
 </script>
 
 <style scoped>
-
 
 </style>

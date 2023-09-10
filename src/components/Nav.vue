@@ -1,5 +1,17 @@
 <template>
   <div class="flex justify-center">
+    <button
+      @click="toggleDark()"
+      class="px-2 py-2 text-white shadow-md transition-transform duration-500 ease-in-out hover:scale-105 bg-gray-700 rounded-full dark:bg-white absolute top-3 right-3"
+    >
+      <span v-if="dark">
+        <img src="../assets/sun.png" alt="Sun Icon" class="rounded w-8 h-8" />
+      </span>
+      <span v-else>
+        <img src="../assets/moon.png" alt="Moon Icon" class="rounded w-8 h-8" />
+      </span>
+    </button>
+
     <header
       class="p-5 shadow-md bg-white rounded-full mt-6 md:flex md:items-center md:justify-between"
     >
@@ -10,39 +22,39 @@
         >
         </span>
       </div>
-      <ul class="hidden md:flex">
+      <ul class="hidden md:flex text-black text-xl">
         <li class="mx-4 my-6 md:my-0">
           <a
             href="#"
-            class="text-xl hover:text-cyan-500 duration-500 focus:text-cyan-500"
+            class="hover:text-cyan-500 duration-500 focus:text-cyan-500"
             >HOME</a
           >
         </li>
         <li class="mx-4 my-6 md:my-0">
           <a
             href="#"
-            class="text-xl hover:text-cyan-500 duration-500 focus:text-cyan-500"
+            class="hover:text-cyan-500 duration-500 focus:text-cyan-500"
             >SERVICE</a
           >
         </li>
         <li class="mx-4 my-6 md:my-0">
           <a
             href="#"
-            class="text-xl hover:text-cyan-500 duration-500 focus:text-cyan-500"
+            class="hover:text-cyan-500 duration-500 focus:text-cyan-500"
             >ABOUT</a
           >
         </li>
         <li class="mx-4 my-6 md:my-0">
           <a
             href="#"
-            class="text-xl hover:text-cyan-500 duration-500 focus:text-cyan-500"
+            class="hover:text-cyan-500 duration-500 focus:text-cyan-500"
             >CONTACT</a
           >
         </li>
         <li class="mx-4 my-6 md:my-0">
           <a
             href="#"
-            class="text-xl hover:text-cyan-500 duration-500 focus:text-cyan-500"
+            class="hover:text-cyan-500 duration-500 focus:text-cyan-500"
             >BLOG'S</a
           >
         </li>
@@ -56,48 +68,48 @@
         aria-label="Display the menu"
         class="menu md:hidden mt-1"
       />
-      
+
       <transition name="fade-slide">
-      <ul
-      v-if="mobileMenuOpen || linksVisible"
-      class="rounded-lg md:flex md:items-center z-10 md:z-auto md:static absolute bg-white w-full left-0 md:w-auto py-2 pl-9 md:opacity-100 md:rounded-none md:mt-0 mt-8"
-      >
-        <li class="mx-4 my-6 md:my-0">
-          <a
-            href="#"
-            class="text-xl focus:text-cyan-500 hover:text-cyan-500 duration-500"
-            >HOME</a
-          >
-        </li>
-        <li class="mx-4 my-6 md:my-0">
-          <a
-            href="#"
-            class="text-xl focus:text-cyan-500 hover:text-cyan-500 duration-500"
-            >SERVICE</a
-          >
-        </li>
-        <li class="mx-4 my-6 md:my-0">
-          <a
-            href="#"
-            class="text-xl focus:text-cyan-500 hover:text-cyan-500 duration-500"
-            >ABOUT</a
-          >
-        </li>
-        <li class="mx-4 my-6 md:my-0">
-          <a
-            href="#"
-            class="text-xl focus:text-cyan-500 hover:text-cyan-500 duration-500"
-            >CONTACT</a
-          >
-        </li>
-        <li class="mx-4 my-6 md:my-0">
-          <a
-            href="#"
-            class="text-xl focus:text-cyan-500 hover:text-cyan-500 duration-500"
-            >BLOG'S</a
-          >
-        </li>
-      </ul>
+        <ul
+          v-if="mobileMenuOpen || linksVisible"
+          class="rounded-lg md:flex md:items-center z-10 md:z-auto md:static absolute text-black bg-white w-full left-0 md:w-auto py-2 pl-9 md:opacity-100 md:rounded-none md:mt-0 mt-8"
+        >
+          <li class="mx-4 my-6 md:my-0">
+            <a
+              href="#"
+              class="text-xl focus:text-cyan-500 hover:text-cyan-500 duration-500"
+              >HOME</a
+            >
+          </li>
+          <li class="mx-4 my-6 md:my-0">
+            <a
+              href="#"
+              class="text-xl focus:text-cyan-500 hover:text-cyan-500 duration-500"
+              >SERVICE</a
+            >
+          </li>
+          <li class="mx-4 my-6 md:my-0">
+            <a
+              href="#"
+              class="text-xl focus:text-cyan-500 hover:text-cyan-500 duration-500"
+              >ABOUT</a
+            >
+          </li>
+          <li class="mx-4 my-6 md:my-0">
+            <a
+              href="#"
+              class="text-xl focus:text-cyan-500 hover:text-cyan-500 duration-500"
+              >CONTACT</a
+            >
+          </li>
+          <li class="mx-4 my-6 md:my-0">
+            <a
+              href="#"
+              class="text-xl focus:text-cyan-500 hover:text-cyan-500 duration-500"
+              >BLOG'S</a
+            >
+          </li>
+        </ul>
       </transition>
     </header>
   </div>
@@ -105,6 +117,10 @@
 
 <script setup lang="ts">
 import { onBeforeUnmount, onMounted, ref } from "vue";
+import { useDark, useToggle } from "@vueuse/core";
+
+const dark = useDark();
+const toggleDark = useToggle(dark);
 
 const mobileMenuOpen = ref<boolean>(false);
 const linksVisible = ref<boolean>(false);
@@ -132,7 +148,6 @@ onBeforeUnmount(() => {
 </script>
 
 <style scoped>
-
 .fade-slide-enter-active,
 .fade-slide-leave-active {
   transition: all 0.5s ease-in;
