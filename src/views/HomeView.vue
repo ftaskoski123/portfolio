@@ -1,11 +1,11 @@
 <template>
-    <main class="flex justify-center items-center ">
+    <main class="flex justify-center items-center">
       <div class="relative">
         <div class="wavy-bubble"></div>
       </div>
-      <div class="flex justify-center items-center absolute bottom-1/2 transform translate-y-1/2">
+      <div class="flex mt-96 top-52 left-14  justify-center items-center absolute ">
         <p class="text-3xl text-black dark:text-white">Tech Stack</p>
-        <div class="hidden md:block mx-4 border-l   border-black dark:border-white h-16"></div>
+        <div class="hidden md:block mx-4 border-l  border-black dark:border-white h-16"></div>
         <div class="flex">
           <img class="transition-transform duration-500 ease-in-out hover:scale-105" src="https://skillicons.dev/icons?i=html,css" />
           <img class="transition-transform duration-500 ease-in-out hover:scale-105 ml-8" src="https://skillicons.dev/icons?i=js,ts" />
@@ -22,8 +22,8 @@
   <style scoped>
   .wavy-bubble {
     position: relative;
-    top: 400px;
-    left: 300%;
+    top: 250px;
+    left: 150%;
     transform: translate(-50%, -50%);
     width: 25rem;
     height: 25rem;
@@ -50,45 +50,6 @@
   
   }
   
-  @media (max-width: 767px) {
-    .flex {
-      flex-wrap: wrap;
-    }
-
-  
-    .ml-8 {
-      margin-left: 15px;
-    }
-    /* Show the horizontal line on smaller screens */
-    .md\\:block {
-      display: block;
-    }
-    .border-black {
-      border-top: none;
-    }
-    .w-16 {
-      width: 100%;
-    }
-    .md:w-auto {
-      width: auto;
-    }
-    .md:mx-0 {
-      margin: 0;
-    }
-    .h-16 {
-      height: auto;
-      margin-top: 1rem;
-    }
-    .ml-4 {
-      margin-left: 1rem;
-    }
-    .text-center {
-      text-align: center;
-    }
-    .text-left {
-      text-align: left;
-    }
-  }
   
   </style>
   
