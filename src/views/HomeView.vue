@@ -3,7 +3,7 @@
       <div class="relative">
         <div class="wavy-bubble"></div>
       </div>
-      <div class="flex mt-96 top-52 left-14  justify-center items-center absolute ">
+      <div class="flex bottom-20 left-14  justify-center items-center absolute ">
         <p class="text-3xl text-black dark:text-white">Tech Stack</p>
         <div class="hidden md:block mx-4 border-l  border-black dark:border-white h-16"></div>
         <div class="flex">
