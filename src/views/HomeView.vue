@@ -13,7 +13,7 @@
     </div>
   </main>
 
-  <p class="text-black text-xl dark:text-white font-semibold mt-8 mr-80 text-center">Hi, I'm Filip Tashkoski. A Front-End Vue Developer based in Skopje Macedonia.</p>
+  <p class="text-black text-xl dark:text-white font-semibold mt-8 mr-80 text-center">Hi, I'm Filip Tashkoski, a dedicated Front-End Vue <br> Developer based in Skopje, Macedonia.</p>
 
   <div class="flex justify-center mt-40 mr-96 items-center">
     <p class="text-3xl text-black dark:text-white">Tech Stack</p>
