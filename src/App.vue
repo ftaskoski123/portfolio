@@ -33,4 +33,10 @@ body {
   @apply bg-custom-color dark:bg-custom-color-dark;
   font-family: Poppins,sans-serif;
 }
+
+@media (max-width: 767px) {
+  body {
+    @apply bg-custom-color dark:bg-custom-color-dark;
+  }
+}
 </style>
