@@ -123,12 +123,21 @@ const toggleDark = useToggle(dark);
 
 const mobileMenuOpen = ref<boolean>(false);
 const linksVisible = ref<boolean>(false);
+const overflow = ref<boolean>(false);
 
 function toggleMobileMenu(): void {
   mobileMenuOpen.value = !mobileMenuOpen.value;
 }
+
 function toggleLinksVisibility(): void {
   linksVisible.value = !linksVisible.value;
+  overflow.value = !overflow.value;
+
+  if (overflow.value) {
+    document.body.style.overflow = "hidden";
+  } else {
+    document.body.style.overflow = "auto";
+  }
 }
 
 function closeLinksOnResize() {
