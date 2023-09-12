@@ -88,10 +88,10 @@
             >
           </li>
           <li class="mx-4 my-6 md:my-0">
-            <a
-              href="#"
+            <router-link to="/about"
+            @click="toggleLinksVisibility"
               class="text-xl focus:text-cyan-500 hover:text-cyan-500 duration-500"
-              >ABOUT</a
+              >ABOUT</router-link
             >
           </li>
           <li class="mx-4 my-6 md:my-0">
@@ -128,16 +128,20 @@ const overflow = ref<boolean>(false);
 function toggleMobileMenu(): void {
   mobileMenuOpen.value = !mobileMenuOpen.value;
 }
-
-function toggleLinksVisibility(): void {
-  linksVisible.value = !linksVisible.value;
+function toggleOverflow(): void {
   overflow.value = !overflow.value;
-
   if (overflow.value) {
     document.body.style.overflow = "hidden";
   } else {
     document.body.style.overflow = "auto";
   }
+  
+}
+
+function toggleLinksVisibility(): void {
+  linksVisible.value = !linksVisible.value;
+  toggleOverflow();
+  
 }
 
 function closeLinksOnResize() {
