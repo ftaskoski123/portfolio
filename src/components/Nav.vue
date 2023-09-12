@@ -26,7 +26,7 @@
         <li class="mx-4 my-6 md:my-0">
           <a
             href="#"
-            class="hover:text-cyan-500 duration-500 focus:text-cyan-500"
+            class="hover:text-cyan-500  duration-500 focus:text-cyan-500"
             >HOME</a
           >
         </li>
@@ -65,13 +65,13 @@
         type="checkbox"
         role="button"
         aria-label="Display the menu"
-        class="menu md:hidden mt-1"
+        class="menu md:hidden mt-1 "
       />
 
       <transition name="fade-slide">
         <ul
           v-if="mobileMenuOpen || linksVisible"
-          class="rounded-lg md:flex md:items-center z-10 md:z-auto md:static absolute text-black bg-white w-full left-0 md:w-auto py-2 pl-9 md:opacity-100 md:rounded-none md:mt-0 mt-8"
+          class="rounded-lg md:flex md:items-center z-10 md:z-auto md:static absolute text-black bg-white  w-screen h-screen left-0 md:w-auto py-2 pl-9 md:opacity-100 md:rounded-none md:mt-0 mt-8"
         >
           <li class="mx-4 my-6 md:my-0">
             <a
