@@ -2,7 +2,7 @@
   <div class="flex justify-center">
     <button
       @click="toggleDark()"
-      class="px-2 py-2 text-white shadow-md  transition-transform duration-500 ease-in-out hover:scale-105 bg-gray-700 rounded-full dark:bg-white absolute top-3 right-3"
+      class="px-2 py-2 text-white shadow-md transition-transform duration-500 ease-in-out hover:scale-105 bg-gray-700 rounded-full dark:bg-white absolute top-3 right-3"
     >
       <span v-if="dark">
         <img src="../assets/sun.png" alt="Sun Icon" class="rounded w-8 h-8" />
@@ -13,7 +13,7 @@
     </button>
 
     <header
-      class="p-5 shadow-md bg-white rounded-full mt-6 md:flex md:items-center md:justify-between"
+      class="p-5 shadow-md bg-white rounded-full mt-2 mr-60 md:mr-0 md:flex md:items-center md:justify-between"
     >
       <div class="flex justify-between items-center">
         <span
@@ -26,7 +26,7 @@
         <li class="mx-4 my-6 md:my-0">
           <a
             href="#"
-            class="hover:text-cyan-500  duration-500 focus:text-cyan-500"
+            class="hover:text-cyan-500 duration-500 focus:text-cyan-500"
             >HOME</a
           >
         </li>
@@ -38,7 +38,8 @@
           >
         </li>
         <li class="mx-4 my-6 md:my-0">
-          <router-link to="/about"
+          <router-link
+            to="/about"
             class="hover:text-cyan-500 cursor-pointer duration-500 focus:text-cyan-500"
             >ABOUT</router-link
           >
@@ -65,19 +66,20 @@
         type="checkbox"
         role="button"
         aria-label="Display the menu"
-        class="menu md:hidden mt-1 "
+        class="menu md:hidden mt-1"
       />
 
       <transition name="fade-slide">
         <ul
           v-if="mobileMenuOpen || linksVisible"
-          class="rounded-lg md:flex  md:items-center z-10 md:z-auto md:static fixed text-black bg-white  w-screen h-screen left-0  md:w-auto py-2 pl-9 md:opacity-100 md:rounded-none md:mt-0 mt-8"
+          class="rounded-lg md:flex md:items-center z-10 md:z-auto md:static fixed text-black bg-white w-screen h-screen left-0 md:w-auto py-2 pl-9 md:opacity-100 md:rounded-none md:mt-0 mt-8"
         >
           <li class="mx-4 my-6 md:my-0">
-            <a
-              href="#"
+            <router-link
+              to="/"
+              @click="toggleLinksVisibility"
               class="text-xl focus:text-cyan-500 hover:text-cyan-500 duration-500"
-              >HOME</a
+              >HOME</router-link
             >
           </li>
           <li class="mx-4 my-6 md:my-0">
@@ -88,8 +90,9 @@
             >
           </li>
           <li class="mx-4 my-6 md:my-0">
-            <router-link to="/about"
-            @click="toggleLinksVisibility"
+            <router-link
+              to="/about"
+              @click="toggleLinksVisibility"
               class="text-xl focus:text-cyan-500 hover:text-cyan-500 duration-500"
               >ABOUT</router-link
             >
@@ -126,7 +129,7 @@ const linksVisible = ref<boolean>(false);
 const overflow = ref<boolean>(false);
 
 function toggleMobileMenu(): void {
-  mobileMenuOpen.value = !mobileMenuOpen.value;
+  mobileMenuOpen.value = false;
 }
 function toggleOverflow(): void {
   overflow.value = !overflow.value;
@@ -135,13 +138,12 @@ function toggleOverflow(): void {
   } else {
     document.body.style.overflow = "auto";
   }
-  
 }
 
 function toggleLinksVisibility(): void {
   linksVisible.value = !linksVisible.value;
+  mobileMenuOpen.value = !mobileMenuOpen.value;
   toggleOverflow();
-  
 }
 
 function closeLinksOnResize() {
@@ -160,7 +162,6 @@ onBeforeUnmount(() => {
 </script>
 
 <style scoped>
-
 .fade-slide-enter-active,
 .fade-slide-leave-active {
   transition: all 0.5s ease-in;
@@ -172,7 +173,6 @@ onBeforeUnmount(() => {
   transform: translateY(-50px);
   transition: transform 0.5s ease-in, opacity 0.3s ease-in;
 }
-
 
 .menu {
   --s: 30px; /* control the size */
