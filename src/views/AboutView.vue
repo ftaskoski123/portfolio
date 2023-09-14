@@ -3,10 +3,10 @@
   <div class="my-8 mx-auto p-6 bg-gray-100 rounded-xl">
     <!-- project photo -->
     <div
-      class="flex justify-center items-center rounded-2xl border-blue-200 shadow-md"
+      class="flex justify-center bg-white items-center rounded-2xl shadow-md"
     >
       <div
-        class="h-[350px] w-[300px] bg-black transition-transform hover-transition ease-in-out bg-[url('@/assets/ss.png')] bg-cover bg-top hover:bg-bottom border-2 border-white"
+        class="h-[350px] w-[300px] bg-black transition-transform hover-transition ease-in-out bg-[url('@/assets/ss.png')] bg-cover bg-top hover:bg-bottom"
       ></div>
     </div>
 
@@ -17,10 +17,10 @@
   <div class="my-8 mx-auto p-6 bg-gray-100 rounded-xl">
     <!-- project photo -->
     <div
-      class="flex justify-center items-center rounded-2xl border-blue-200 shadow-md"
+      class="flex justify-center items-center rounded-2xl bg-white shadow-md"
     >
       <div
-        class="h-[350px] w-[300px] bg-black transition-transform hover-transition ease-in-out bg-[url('@/assets/ss.png')] bg-cover bg-top hover:bg-bottom border-2 border-white"
+        class="h-[350px] w-[300px] bg-black transition-transform hover-transition ease-in-out bg-[url('@/assets/ss.png')] bg-cover bg-top hover:bg-bottom "
       ></div>
     </div>
 
@@ -31,10 +31,10 @@
   <div class="my-8 mx-auto p-6 bg-gray-100 rounded-xl">
     <!-- project photo -->
     <div
-      class="flex justify-center items-center rounded-2xl border-blue-200 shadow-md"
+      class="flex justify-center items-center rounded-2xl bg-white dark:bg-black shadow-md"
     >
       <div
-        class="h-[350px] w-[300px] bg-black transition-transform hover-transition ease-in-out bg-[url('@/assets/ss.png')] bg-cover bg-top hover:bg-bottom border-2 border-white"
+        class="h-[350px] w-[300px] bg-black transition-transform hover-transition ease-in-out bg-[url('@/assets/ss.png')] bg-cover bg-top hover:bg-bottom "
       ></div>
     </div>
 
@@ -45,10 +45,10 @@
   <div class="my-8 mx-auto p-6 bg-gray-100 rounded-xl">
     <!-- project photo -->
     <div
-      class="flex justify-center items-center rounded-2xl border-blue-200 shadow-md"
+      class="flex justify-center items-center rounded-2xl bg-white shadow-md"
     >
       <div
-        class="h-[350px] w-[300px] bg-black transition-transform hover-transition ease-in-out bg-[url('@/assets/ss.png')] bg-cover bg-top hover:bg-bottom border-2 border-white"
+        class="h-[350px] w-[300px] bg-black transition-transform hover-transition ease-in-out bg-[url('@/assets/ss.png')] bg-cover bg-top hover:bg-bottom "
       ></div>
     </div>
 
