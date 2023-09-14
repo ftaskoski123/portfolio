@@ -98,10 +98,11 @@
             >
           </li>
           <li class="mx-4 my-6 md:my-0">
-            <a
-              href="#"
+            <router-link
+              to="/contact"
+              @click="toggleLinksVisibility"
               class="text-xl focus:text-cyan-500 hover:text-cyan-500 duration-500"
-              >CONTACT</a
+              >CONTACT</router-link
             >
           </li>
           <li class="mx-4 my-6 md:my-0">

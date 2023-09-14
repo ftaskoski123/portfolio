@@ -1,6 +1,6 @@
 <template>
   <!-- phone -->
-
+<!-- <div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20"> -->
   <main class="text-center p-4">
     <div>
       <h3 class="text-4xl sm:text-6xl font-semibold text-black dark:text-white">
@@ -39,7 +39,7 @@
         stroke-width="2"
         stroke-linecap="round"
         stroke-linejoin="round"
-        class="focus:text-cyan-500 hover:text-cyan-500 mr-4"
+        class="focus:text-blue-500 hover:text-blue-500 mr-4"
         data-darkreader-inline-stroke=""
         style="--darkreader-inline-stroke: currentColor"
       >
@@ -63,7 +63,7 @@
         stroke-width="2"
         stroke-linecap="round"
         stroke-linejoin="round"
-        class="focus:text-cyan-500 hover:text-cyan-500"
+        class="focus:text-blue-500 hover:text-blue-500"
         data-darkreader-inline-stroke=""
         style="--darkreader-inline-stroke: currentColor"
       >
@@ -103,6 +103,7 @@
       />
     </div>
   </div>
+<!-- </div> -->
 </template>
 
 <script setup></script>
