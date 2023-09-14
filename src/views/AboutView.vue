@@ -1,4 +1,5 @@
 <template>
+  <div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
   <!-- card look -->
   <div class="my-8 mx-auto p-6 bg-gray-100 rounded-xl">
     <!-- project photo -->
@@ -54,6 +55,8 @@
 
     <p class="text-black text-center">Find A Coach</p>
   </div>
+  
+</div>
 </template>
 
 <style scoped>
