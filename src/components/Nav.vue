@@ -1,8 +1,8 @@
 <template>
-  <div class="flex justify-center">
+  <div class="flex justify-center ">
     <button
       @click="toggleDark()"
-      class="px-2 py-2 text-white shadow-md transition-transform duration-500 ease-in-out hover:scale-105 bg-gray-700 rounded-full dark:bg-white absolute top-3 right-3"
+      class="px-2 py-2 text-white shadow-md transition-transform duration-500 ease-in-out hover:scale-105 bg-gray-700 rounded-full dark:bg-white absolute top-3 right-2"
     >
       <span v-if="dark">
         <img src="../assets/sun.png" alt="Sun Icon" class="rounded w-8 h-8" />
