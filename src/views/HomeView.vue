@@ -1,6 +1,6 @@
 <template>
   <!-- phone -->
-<div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+<div class="px-4  py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
   <main class="text-center p-4">
     <div>
       <h3 class="text-4xl sm:text-6xl font-semibold text-black dark:text-white">
@@ -14,7 +14,7 @@
       </h3>
     </div>
     <div class="relatives">
-      <div class="wavy-bubble" style="width: 15rem; height: 15rem"></div>
+      <div class="wavy-bubble"></div>
       <!-- <div class=></div> -->
     </div>
   </main>
@@ -110,7 +110,7 @@
 
 <style scoped>
 .wavy-bubble {
-  @apply relative -translate-x-2/4 -translate-y-2/4 w-[25rem] h-[25rem] animate-[morph_8s_ease-in-out_infinite] bg-[url("../assets/slika.jpg")] bg-cover bg-center bg-no-repeat rounded-[50%] border-[3px] border-solid border-[#2d2e32] left-44 top-[140px];
+  @apply relative -translate-x-2/4 -translate-y-2/4 w-[15rem] h-[15rem] animate-[morph_8s_ease-in-out_infinite] bg-[url("../assets/slika.jpg")] bg-cover bg-center bg-no-repeat rounded-[50%] border-[3px] border-solid border-[#2d2e32] left-44 top-[140px] ;
   @apply dark:border-white;
 }
 
