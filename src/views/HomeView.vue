@@ -20,14 +20,14 @@
     </div>
   </main>
   <p
-    class="text-black text-base leading-[1.6] dark:text-white mt-8 mr-2 2xl:ml-[8rem] text-center 2xl:text-left  "
+    class="text-black text-base leading-[1.6] dark:text-slate-100 mt-8 mr-2 2xl:ml-[8rem] text-center 2xl:text-left  "
   >
     Hi, I'm Filip Tashkoski, a dedicated Front-End Vue <br />
     Developer based in Skopje, Macedonia.<br />
   </p>
 
   <!-- SVG's-->
-  <div class="text-black flex justify-center 2xl:relative items-center 2xl:mt-6 mr-3 mt-10 2xl:mr-[55rem]">
+  <div class="text-black dark:text-slate-200 flex justify-center 2xl:relative items-center 2xl:mt-6 mr-3 mt-10 2xl:mr-[55rem]">
     <!-- Github -->
     <a href="https://github.com/ftaskoski123" target="_blank">
       <svg
@@ -81,9 +81,9 @@
 
   <!-- Tech Stack -->
   <div class="flex flex-col 2xl:mt-40 2xl:ml-40 items-center mt-8 2xl:flex-row">
-    <p class="text-2xl text-black dark:text-white mb-4">Tech Stack</p>
+    <p class="text-2xl text-black dark:text-slate-200 mb-4">Tech Stack</p>
 
-    <div class=" h-[1px] w-[115px] mb-4 2xl:h-[60px] 2xl:w-[1px] 2xl:mb-2 2xl:mx-2 bg-black "></div>
+    <div class=" h-[1px] w-[115px] mb-4 2xl:h-[60px] 2xl:w-[1px] 2xl:mb-2 2xl:mx-2 bg-black dark:bg-white"></div>
 
     <div class="flex flex-wrap justify-center">
       <img

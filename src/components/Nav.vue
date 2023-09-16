@@ -1,7 +1,7 @@
 <template>
   <div class="flex justify-center">
     <header
-      class="p-5 shadow-md bg-white fixed z-50 md:mr-0 md:flex md:items-center md:justify-between w-full"
+      class="p-5 shadow-md bg-white dark:bg-gray-800  fixed z-50 md:mr-0 md:flex md:items-center md:justify-between w-full"
     >
       <div class="flex justify-between items-center">
         <span
@@ -24,7 +24,7 @@
           />
         </span>
       </button>
-      <ul class="hidden md:flex text-black text-xl mr-10">
+      <ul class="hidden md:flex text-black text-xl mr-10  dark:text-white">
         <li class="mx-4 my-6 md:my-0">
           <a
             href="#"
