@@ -11,19 +11,24 @@ const router = createRouter({
       name: 'home',
       component: HomeView
     },
-    {
-      path: '/about',
-      name: 'about',
 
-      component: AboutView
-    },
     {
-      path:'/contact',
-      name:'contact',
-      component:Contact
-
+      path: '/contact',
+      name: 'contact',
+      component: Contact
     }
-  ]
-})
+  ],
+  scrollBehavior(to, from, savedPosition) {
+    if (savedPosition) {
+      return savedPosition;
+    }else{
+      const position = {};
+      if (to.hash) {
+        position.selector = to.hash;
+        return false;
+      }
+    }
+  }
+});
 
 export default router

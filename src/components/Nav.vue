@@ -1,19 +1,7 @@
 <template>
-  <div class="flex justify-center ">
-    <button
-      @click="toggleDark()"
-      class="px-2 py-2 text-white shadow-md transition-transform duration-500 ease-in-out hover:scale-105 bg-gray-700 rounded-full dark:bg-white absolute top-3 right-2"
-    >
-      <span v-if="dark">
-        <img src="../assets/sun.png" alt="Sun Icon" class="rounded w-8 h-8" />
-      </span>
-      <span v-else>
-        <img src="../assets/moon.png" alt="Moon Icon" class="rounded w-8 h-8" />
-      </span>
-    </button>
-
+  <div class="flex justify-center">
     <header
-      class="p-5 shadow-md bg-white rounded-full mt-2 mr-60 md:mr-0 md:flex md:items-center md:justify-between"
+      class="p-5 shadow-md bg-white fixed z-50 md:mr-0 md:flex md:items-center md:justify-between w-full"
     >
       <div class="flex justify-between items-center">
         <span
@@ -22,7 +10,22 @@
         >
         </span>
       </div>
-      <ul class="hidden md:flex text-black text-xl">
+      <button
+        @click="toggleDark()"
+        class="px-2 py-2 mb-1 text-white shadow-md transition-transform duration-500 ease-in-out hover:scale-105 bg-gray-700 rounded-full dark:bg-white absolute right-4"
+      >
+        <span v-if="dark">
+          <img src="../assets/sun.png" alt="Sun Icon" class="rounded w-8 h-8" />
+        </span>
+        <span v-else>
+          <img
+            src="../assets/moon.png"
+            alt="Moon Icon"
+            class="rounded w-8 h-8"
+          />
+        </span>
+      </button>
+      <ul class="hidden md:flex text-black text-xl mr-10">
         <li class="mx-4 my-6 md:my-0">
           <a
             href="#"
@@ -38,10 +41,10 @@
           >
         </li>
         <li class="mx-4 my-6 md:my-0">
-          <router-link
-            to="/about"
+          <a
+            @click="scrollToAboutAndAddRoute"
             class="hover:text-cyan-500 cursor-pointer duration-500 focus:text-cyan-500"
-            >ABOUT</router-link
+            >ABOUT</a
           >
         </li>
         <li class="mx-4 my-6 md:my-0">
@@ -66,13 +69,13 @@
         type="checkbox"
         role="button"
         aria-label="Display the menu"
-        class="menu md:hidden mt-1"
+        class="menu md:hidden"
       />
 
       <transition name="fade-slide">
         <ul
           v-if="mobileMenuOpen || linksVisible"
-          class="rounded-lg md:flex md:items-center z-10 md:z-auto md:static fixed text-black bg-white w-screen h-screen left-0 md:w-auto py-2 pl-9 md:opacity-100 md:rounded-none md:mt-0 mt-8"
+          class="md:flex mt-2 md:items-center z-10 md:z-auto md:static fixed text-black bg-white w-screen h-screen left-0 md:w-auto py-2 pl-1 md:opacity-100 md:rounded-none md:mt-0"
         >
           <li class="mx-4 my-6 md:my-0">
             <router-link
@@ -121,7 +124,9 @@
 <script setup lang="ts">
 import { onBeforeUnmount, onMounted, ref } from "vue";
 import { useDark, useToggle } from "@vueuse/core";
-
+import { useRouter, useRoute } from "vue-router";
+const router = useRouter();
+const route = useRoute();
 const dark = useDark();
 const toggleDark = useToggle(dark);
 
@@ -140,7 +145,14 @@ function toggleOverflow(): void {
     document.body.style.overflow = "auto";
   }
 }
-
+function scrollToAboutAndAddRoute() {
+  const aboutSection = document.getElementById("about");
+  if (aboutSection) {
+    aboutSection.scrollIntoView({ behavior: "smooth" });
+    // Use router.push with the hash
+    router.push({ hash: "#about" });
+  }
+}
 function toggleLinksVisibility(): void {
   linksVisible.value = !linksVisible.value;
   mobileMenuOpen.value = !mobileMenuOpen.value;
