@@ -11,7 +11,7 @@
       </div>
       <button
         @click="toggleDark()"
-        class="px-2 py-2 mb-1 text-white shadow-md transition-transform duration-500 ease-in-out hover:scale-105 bg-gray-700 rounded-full dark:bg-white absolute right-4"
+        class="px-2 py-2 text-white shadow-md transition-transform duration-500 ease-in-out hover:scale-105 bg-gray-700 rounded-full dark:bg-white absolute top-3 right-4"
       >
         <span v-if="dark">
           <img src="../assets/sun.png" alt="Sun Icon" class="rounded w-8 h-8" />
@@ -41,7 +41,7 @@
         </li>
         <li class="mx-4 my-6 md:my-0">
           <a
-            @click="scrollToAbout"
+            @click="scrollToProjects"
             class="hover:text-cyan-500 cursor-pointer duration-500 focus:text-cyan-500"
             >PROJECTS</a
           >
@@ -80,14 +80,7 @@
           </li>
           <li class="mx-4 my-6 md:my-0">
             <a
-              href="#"
-              class="text-xl focus:text-cyan-500 hover:text-cyan-500 duration-500"
-              >SERVICE</a
-            >
-          </li>
-          <li class="mx-4 my-6 md:my-0">
-            <a
-            @click="scrollToAboutMobile"         
+            @click="scrollToProjectsMobile"         
                  class="text-xl focus:text-cyan-500 hover:text-cyan-500 duration-500"
               >ABOUT</a
             >
@@ -97,14 +90,14 @@
               to="/contact"
               @click="toggleLinksVisibility"
               class="text-xl focus:text-cyan-500 hover:text-cyan-500 duration-500"
-              >CONTACT</router-link
+              >PROJECTS</router-link
             >
           </li>
           <li class="mx-4 my-6 md:my-0">
             <a
               href="#"
               class="text-xl focus:text-cyan-500 hover:text-cyan-500 duration-500"
-              >BLOG'S</a
+              >CONTACT</a
             >
           </li>
         </ul>
@@ -133,11 +126,11 @@ function toggleOverflow(): void {
     document.body.style.overflow = "auto";
   }
 }
-function scrollToAbout() {
-  const aboutSection = document.getElementById("about");
+function scrollToProjects() {
+  const aboutSection = document.getElementById("projects");
   if (aboutSection) {
     aboutSection.scrollIntoView({ behavior: "smooth" });
-    router.push({ hash: "#about" });
+    router.push({ hash: "#projects" });
   }
 }
 function toggleLinksVisibility(): void {
@@ -151,8 +144,8 @@ function closeLinksOnResize() {
     linksVisible.value = false;
   }
 }
-function scrollToAboutMobile(): void {
-  scrollToAbout(); 
+function scrollToProjectsMobile(): void {
+  scrollToProjects(); 
   toggleLinksVisibility(); 
 }
 onMounted(() => {

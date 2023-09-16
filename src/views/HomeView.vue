@@ -1,32 +1,33 @@
 <template>
   <!-- phone -->
-<div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full  lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+<div class="px-4 py-16 mt-20 mx-auto sm:max-w-xl md:max-w-full  lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
   <main class="text-center p-4">
-    <div>
-      <h3 class="text-4xl sm:text-6xl font-semibold text-black dark:text-white">
+    <div class="2xl:ml-[7rem] 2xl:mt-40">
+      <div class="2xl:flex  2xl:text-left">
+      <h3 class="text-4xl sm:text-6xl  font-semibold text-black dark:text-white">
         Front-End
       </h3>
-      <h3 class="text-4xl sm:text-6xl font-semibold text-black dark:text-white">
+      <h3 class="text-4xl sm:text-6xl text font-semibold text-black dark:text-white">
         <span class="vue-icon ml-4 mr-4 font-semibold">Vue</span>
       </h3>
-      <h3 class="text-4xl sm:text-6xl font-semibold text-black dark:text-white">
+    </div>
+      <h3 class="text-4xl sm:text-6xl 2xl:text-left font-semibold text-black dark:text-white">
         Developer
       </h3>
     </div>
-    <div class="relatives">
-      <div class="wavy-bubble"></div>
-      <!-- <div class=></div> -->
+    <div class="relative 2xl:absolute">
+      <div class="wavy-bubble 2xl:ml-[50rem] 2xl:mt-[-8rem]"></div>
     </div>
   </main>
   <p
-    class="text-[#555] text-base font-medium leading-[1.6] dark:text-white mt-8 mr-2 text-center"
+    class="text-black text-base leading-[1.6] dark:text-white mt-8 mr-2 2xl:ml-[8rem] text-center 2xl:text-left  "
   >
     Hi, I'm Filip Tashkoski, a dedicated Front-End Vue <br />
     Developer based in Skopje, Macedonia.<br />
   </p>
 
   <!-- SVG's-->
-  <div class="text-black flex justify-center items-center mr-3 mt-10">
+  <div class="text-black flex justify-center 2xl:relative items-center 2xl:mt-6 mr-3 mt-10 2xl:mr-[55rem]">
     <!-- Github -->
     <a href="https://github.com/ftaskoski123" target="_blank">
       <svg
@@ -39,7 +40,7 @@
         stroke-width="2"
         stroke-linecap="round"
         stroke-linejoin="round"
-        class="focus:text-blue-500 hover:text-blue-500 mr-4"
+        class="focus:text-blue-500 hover:text-blue-500 mr-4 "
         data-darkreader-inline-stroke=""
         style="--darkreader-inline-stroke: currentColor"
       >
@@ -79,11 +80,11 @@
   </div>
 
   <!-- Tech Stack -->
-  <div class="flex flex-col items-center mt-8">
+  <div class="flex flex-col 2xl:mt-40 2xl:ml-40 items-center mt-8 2xl:flex-row">
     <p class="text-2xl text-black dark:text-white mb-4">Tech Stack</p>
-    <div
-      class="mx-4 border-t border-black dark:border-white w-20 mb-4 md:hidden"
-    ></div>
+
+    <div class=" h-[1px] w-[115px] mb-4 2xl:h-[60px] 2xl:w-[1px] 2xl:mb-2 2xl:mx-2 bg-black "></div>
+
     <div class="flex flex-wrap justify-center">
       <img
         class="transition-transform duration-500 ease-in-out hover:scale-105 mb-4 mx-2"
@@ -106,7 +107,7 @@
 </div>
   
   
-  <AboutView id="about"/>
+  <Projects id="projects"/>
   <Contact id="contact"/>
 </template>
 
@@ -114,7 +115,7 @@
 
 <style scoped>
 .wavy-bubble {
-  @apply relative -translate-x-2/4 -translate-y-2/4 w-[15rem] h-[15rem] animate-[morph_8s_ease-in-out_infinite] bg-[url("../assets/slika.jpg")] bg-cover bg-center bg-no-repeat rounded-[50%] border-[3px] border-solid border-[#2d2e32] left-44 top-[140px] ;
+  @apply relative -translate-x-2/4 -translate-y-2/4 w-[15rem] h-[15rem] animate-[morph_8s_ease-in-out_infinite] bg-[url("../assets/slika.jpg")] bg-cover bg-center bg-no-repeat rounded-[50%] border-[3px] border-solid border-[#2d2e32] left-44 top-[140px] 2xl:w-[25rem] 2xl:h-[25rem];
   @apply dark:border-white;
 }
 
@@ -138,7 +139,7 @@
 </style>
 
 <script setup>
-import AboutView from './AboutView.vue';
+import Projects from './Projects.vue';
 import Contact from './Contact.vue';
 
 </script>

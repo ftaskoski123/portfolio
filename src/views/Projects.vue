@@ -1,5 +1,5 @@
 <template>
-  <div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+  <div class="px-4 mt-[65rem] mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
   <!-- card look -->
   <div class="my-8 mx-auto p-6 2xl:flex 2xl:mx-16 bg-gray-100 rounded-xl">
     <!-- project photo -->
