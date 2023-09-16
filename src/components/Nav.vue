@@ -6,7 +6,6 @@
       <div class="flex justify-between items-center">
         <span
           class="text-3xl cursor-pointer mx-2 md:hidden block"
-          @click="toggleMobileMenu"
         >
         </span>
       </div>
@@ -88,8 +87,8 @@
           </li>
           <li class="mx-4 my-6 md:my-0">
             <a
-              @click="toggleLinksVisibility"
-              class="text-xl focus:text-cyan-500 hover:text-cyan-500 duration-500"
+            @click="scrollToAboutMobile"         
+                 class="text-xl focus:text-cyan-500 hover:text-cyan-500 duration-500"
               >ABOUT</a
             >
           </li>
@@ -117,7 +116,7 @@
 <script setup lang="ts">
 import { onBeforeUnmount, onMounted, ref } from "vue";
 import { useDark, useToggle } from "@vueuse/core";
-import { useRouter, useRoute } from "vue-router";
+import { useRouter } from "vue-router";
 const router = useRouter();
 const dark = useDark();
 const toggleDark = useToggle(dark);
@@ -126,9 +125,6 @@ const mobileMenuOpen = ref<boolean>(false);
 const linksVisible = ref<boolean>(false);
 const overflow = ref<boolean>(false);
 
-function toggleMobileMenu(): void {
-  mobileMenuOpen.value = false;
-}
 function toggleOverflow(): void {
   overflow.value = !overflow.value;
   if (overflow.value) {
@@ -155,7 +151,10 @@ function closeLinksOnResize() {
     linksVisible.value = false;
   }
 }
-
+function scrollToAboutMobile(): void {
+  scrollToAbout(); 
+  toggleLinksVisibility(); 
+}
 onMounted(() => {
   window.addEventListener("resize", closeLinksOnResize);
 });
@@ -234,5 +233,13 @@ onBeforeUnmount(() => {
   border: none;
   outline: 2px solid var(--c);
   outline-offset: 5px;
+}
+.menu-open {
+  transform: rotate(45deg);
+}
+
+/* Styles for the closed menu icon (hamburger shape) */
+.menu-closed {
+  transform: rotate(0deg);
 }
 </style>
