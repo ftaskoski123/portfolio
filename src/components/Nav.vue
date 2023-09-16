@@ -75,7 +75,7 @@
       <transition name="fade-slide">
         <ul
           v-if="mobileMenuOpen || linksVisible"
-          class="md:flex mt-2 md:items-center z-10 md:z-auto md:static fixed text-black bg-white w-screen h-screen left-0 md:w-auto py-2 pl-1 md:opacity-100 md:rounded-none md:mt-0"
+          class="md:flex mt-5 md:items-center z-10 md:z-auto md:static fixed text-black bg-white w-screen h-screen left-0 md:w-auto py-2 pl-1 md:opacity-100 md:rounded-none md:mt-0"
         >
           <li class="mx-4 my-6 md:my-0">
             <router-link
