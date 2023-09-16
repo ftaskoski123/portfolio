@@ -37,14 +37,14 @@
           <a
             href="#"
             class="hover:text-cyan-500 duration-500 focus:text-cyan-500"
-            >SERVICE</a
+            >ABOUT</a
           >
         </li>
         <li class="mx-4 my-6 md:my-0">
           <a
-            @click="scrollToAboutAndAddRoute"
+            @click="scrollToAbout"
             class="hover:text-cyan-500 cursor-pointer duration-500 focus:text-cyan-500"
-            >ABOUT</a
+            >PROJECTS</a
           >
         </li>
         <li class="mx-4 my-6 md:my-0">
@@ -54,13 +54,7 @@
             >CONTACT</a
           >
         </li>
-        <li class="mx-4 my-6 md:my-0">
-          <a
-            href="#"
-            class="hover:text-cyan-500 duration-500 focus:text-cyan-500"
-            >BLOG'S</a
-          >
-        </li>
+ 
       </ul>
 
       <!--Phone-->
@@ -93,11 +87,10 @@
             >
           </li>
           <li class="mx-4 my-6 md:my-0">
-            <router-link
-              to="/about"
+            <a
               @click="toggleLinksVisibility"
               class="text-xl focus:text-cyan-500 hover:text-cyan-500 duration-500"
-              >ABOUT</router-link
+              >ABOUT</a
             >
           </li>
           <li class="mx-4 my-6 md:my-0">
@@ -126,7 +119,6 @@ import { onBeforeUnmount, onMounted, ref } from "vue";
 import { useDark, useToggle } from "@vueuse/core";
 import { useRouter, useRoute } from "vue-router";
 const router = useRouter();
-const route = useRoute();
 const dark = useDark();
 const toggleDark = useToggle(dark);
 
@@ -145,11 +137,10 @@ function toggleOverflow(): void {
     document.body.style.overflow = "auto";
   }
 }
-function scrollToAboutAndAddRoute() {
+function scrollToAbout() {
   const aboutSection = document.getElementById("about");
   if (aboutSection) {
     aboutSection.scrollIntoView({ behavior: "smooth" });
-    // Use router.push with the hash
     router.push({ hash: "#about" });
   }
 }
