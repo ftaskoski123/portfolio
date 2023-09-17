@@ -2,13 +2,14 @@
     <div class="px-4 py-24 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
   <div>
     <h3
-      class="text-4xl text-center mt-12 sm:text-6xl font-semibold text-gray-900 dark:text-white"
+      class="flex justify-center  mt-12 text-2xl tracking-tight font-black font-serif  text-black dark:text-white"
     >
-      Get in Touch
+    DROP A MESSAGE ! 🤙🏼
     </h3>
   </div>
 
   <!--Location-->
+  
   <div class="flex justify-center items-center mt-20">
     <div class="rounded-full shadow-2xl bg-white inline-block p-3">
       <svg
@@ -58,6 +59,5 @@
   >
  filip.taskoski77@gmail.com<br />
   </p>
-  
 </div>
 </template>

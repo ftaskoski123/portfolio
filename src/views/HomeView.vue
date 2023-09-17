@@ -22,8 +22,7 @@
   <p
     class="text-black text-base leading-[1.6] dark:text-slate-100 mt-8 mr-2 2xl:ml-[8rem] text-center 2xl:text-left  "
   >
-    Hi, I'm Filip Tashkoski, a dedicated Front-End Vue <br />
-    Developer based in Skopje, Macedonia.<br />
+  Hello! I'm a Front-End Vue.js Developer hailing from Skopje, Macedonia.<br> With a passion for crafting user-friendly and visually appealing web applications,<br> I thrive in the world of front-end development.In my role as a Front-End Vue Developer, <br>I am dedicated to creating seamless and engaging user experiences.<br> Whether it's designing responsive and intuitive interfaces, optimizing web performance,<br> or troubleshooting cross-browser compatibility issues, I'm always up for the challenge.
   </p>
 
   <!-- SVG's-->
@@ -108,6 +107,7 @@
   
   
   <Projects id="projects"/>
+  <!-- <About id="about"/> -->
   <Contact id="contact"/>
 </template>
 
@@ -141,5 +141,4 @@
 <script setup>
 import Projects from './Projects.vue';
 import Contact from './Contact.vue';
-
 </script>

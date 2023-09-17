@@ -28,28 +28,21 @@
         <li class="mx-4 my-6 md:my-0">
           <a
             href="#"
-            class="hover:text-cyan-500 duration-500 focus:text-cyan-500"
+            class="hover:text-blue-500 duration-500 focus:text-blue-500"
             >HOME</a
           >
         </li>
         <li class="mx-4 my-6 md:my-0">
           <a
-            href="#"
-            class="hover:text-cyan-500 duration-500 focus:text-cyan-500"
-            >ABOUT</a
-          >
-        </li>
-        <li class="mx-4 my-6 md:my-0">
-          <a
             @click="scrollToProjects"
-            class="hover:text-cyan-500 cursor-pointer duration-500 focus:text-cyan-500"
+            class="hover:text-blue-500 cursor-pointer duration-500 focus:text-blue-500"
             >PROJECTS</a
           >
         </li>
         <li class="mx-4 my-6 md:my-0">
           <a
             href="#"
-            class="hover:text-cyan-500 duration-500 focus:text-cyan-500"
+            class="hover:text-blue-500 duration-500 focus:text-blue-500"
             >CONTACT</a
           >
         </li>
@@ -76,13 +69,6 @@
               @click="toggleLinksVisibility"
               class="text-xl focus:text-cyan-500 hover:text-cyan-500 duration-500"
               >HOME</router-link
-            >
-          </li>
-          <li class="mx-4 my-6 md:my-0">
-            <a
-            @click="scrollToProjectsMobile"         
-                 class="text-xl focus:text-cyan-500 hover:text-cyan-500 duration-500"
-              >ABOUT</a
             >
           </li>
           <li class="mx-4 my-6 md:my-0">
