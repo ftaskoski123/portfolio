@@ -27,8 +27,8 @@
       <ul class="hidden md:flex text-black text-xl mr-10  dark:text-white">
         <li class="mx-4 my-6 md:my-0">
           <a
-            href="#"
-            class="hover:text-blue-500 duration-500 focus:text-blue-500"
+            @click="scrollToTop"
+            class="hover:text-blue-500 cursor-pointer duration-500 focus:text-blue-500"
             >HOME</a
           >
         </li>
@@ -41,8 +41,8 @@
         </li>
         <li class="mx-4 my-6 md:my-0">
           <a
-            href="#"
-            class="hover:text-blue-500 duration-500 focus:text-blue-500"
+            @click="scrollToContact"
+            class="hover:text-blue-500 cursor-pointer duration-500 focus:text-blue-500"
             >CONTACT</a
           >
         </li>
@@ -64,24 +64,22 @@
           class="md:flex mt-5 md:items-center z-10 md:z-auto md:static fixed text-black bg-white w-screen h-screen left-0 md:w-auto py-2 pl-1 md:opacity-100 md:rounded-none md:mt-0"
         >
           <li class="mx-4 my-6 md:my-0">
-            <router-link
-              to="/"
-              @click="toggleLinksVisibility"
+            <a
+              @click="scrollToTopMobile"
               class="text-xl focus:text-cyan-500 hover:text-cyan-500 duration-500"
-              >HOME</router-link
-            >
-          </li>
-          <li class="mx-4 my-6 md:my-0">
-            <router-link
-              to="/contact"
-              @click="toggleLinksVisibility"
-              class="text-xl focus:text-cyan-500 hover:text-cyan-500 duration-500"
-              >PROJECTS</router-link
+              >HOME</a
             >
           </li>
           <li class="mx-4 my-6 md:my-0">
             <a
-              href="#"
+              @click="scrollToProjectsMobile"
+              class="text-xl focus:text-cyan-500 hover:text-cyan-500 duration-500"
+              >PROJECTS</a
+            >
+          </li>
+          <li class="mx-4 my-6 md:my-0">
+            <a
+              @click="scrollToContactMobile"
               class="text-xl focus:text-cyan-500 hover:text-cyan-500 duration-500"
               >CONTACT</a
             >
@@ -119,6 +117,20 @@ function scrollToProjects() {
     router.push({ hash: "#projects" });
   }
 }
+
+function scrollToTop() {
+  window.scrollTo({ top: 0,left: 0, behavior: "smooth" });
+  router.push({ hash: "#home" });
+}
+
+function scrollToContact() {
+  const aboutSection = document.getElementById("contact");
+  if (aboutSection) {
+    aboutSection.scrollIntoView({ behavior: "smooth" });
+    router.push({ hash: "#contact" });
+  }
+}
+
 function toggleLinksVisibility(): void {
   linksVisible.value = !linksVisible.value;
   mobileMenuOpen.value = !mobileMenuOpen.value;
@@ -134,6 +146,17 @@ function scrollToProjectsMobile(): void {
   scrollToProjects(); 
   toggleLinksVisibility(); 
 }
+
+function scrollToContactMobile(): void {
+  scrollToContact();
+  toggleLinksVisibility();
+}
+
+function scrollToTopMobile(): void {
+  scrollToTop();
+  toggleLinksVisibility();
+}
+
 onMounted(() => {
   window.addEventListener("resize", closeLinksOnResize);
 });

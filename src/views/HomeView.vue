@@ -107,7 +107,6 @@
   
   
   <Projects id="projects"/>
-  <!-- <About id="about"/> -->
   <Contact id="contact"/>
 </template>
 
