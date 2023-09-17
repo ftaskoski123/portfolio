@@ -1,5 +1,5 @@
 <template>
-  <div class="px-4 2xl:mt-[65rem] mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+  <div class="px-4 2xl:mt-[65rem] md:mt-80 lg:mt-28 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
     <div>
     <h3
       class="flex justify-center  mt-12 text-2xl tracking-tight font-black font-serif  text-black dark:text-white"
@@ -8,7 +8,7 @@
     </h3>
   </div>
   <!-- card look -->
-  <div class="my-8 mx-auto p-6 2xl:flex 2xl:mx-16  bg-gray-100 rounded-xl">
+  <div class="my-8 mx-auto p-6 2xl:flex 2xl:mx-16 lg:mx-4 lg:flex bg-gray-100 rounded-xl">
     <!-- project photo -->
     <div
       class="flex justify-center 2xl:w-[550px]  items-center rounded-2xl shadow-md"
