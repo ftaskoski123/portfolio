@@ -26,24 +26,24 @@
       </button>
       <ul class="hidden md:flex text-black text-xl mr-10  dark:text-white">
         <li class="mx-4 my-6 md:my-0">
-          <a
+          <router-link to=""
             @click="scrollToTop"
             class="hover:text-blue-500 cursor-pointer duration-500 focus:text-blue-500"
-            >HOME</a
+            >HOME</router-link
           >
         </li>
         <li class="mx-4 my-6 md:my-0">
-          <a
+          <router-link to=""
             @click="scrollToProjects"
             class="hover:text-blue-500 cursor-pointer duration-500 focus:text-blue-500"
-            >PROJECTS</a
+            >PROJECTS</router-link
           >
         </li>
         <li class="mx-4 my-6 md:my-0">
-          <a
+          <router-link to=""
             @click="scrollToContact"
             class="hover:text-blue-500 cursor-pointer duration-500 focus:text-blue-500"
-            >CONTACT</a
+            >CONTACT</router-link
           >
         </li>
  
@@ -64,24 +64,24 @@
           class="md:flex mt-5 md:items-center z-10 md:z-auto md:static fixed text-black bg-white w-screen h-screen left-0 md:w-auto py-2 pl-1 md:opacity-100 md:rounded-none md:mt-0"
         >
           <li class="mx-4 my-6 md:my-0">
-            <a
+            <router-link to=""
               @click="scrollToTopMobile"
-              class="text-xl focus:text-cyan-500 hover:text-cyan-500 duration-500"
-              >HOME</a
+              class="text-xl focus:text-blue-500 hover:text-blue-500 duration-500"
+              >HOME</router-link
             >
           </li>
           <li class="mx-4 my-6 md:my-0">
-            <a
+            <router-link to=""
               @click="scrollToProjectsMobile"
-              class="text-xl focus:text-cyan-500 hover:text-cyan-500 duration-500"
-              >PROJECTS</a
+              class="text-xl focus:text-blue-500 hover:text-blue-500 duration-500"
+              >PROJECTS</router-link
             >
           </li>
           <li class="mx-4 my-6 md:my-0">
-            <a
+            <router-link to=""
               @click="scrollToContactMobile"
-              class="text-xl focus:text-cyan-500 hover:text-cyan-500 duration-500"
-              >CONTACT</a
+              class="text-xl focus:text-blue-500 hover:text-blue-500 duration-500"
+              >CONTACT</router-link
             >
           </li>
         </ul>
@@ -177,6 +177,10 @@ onBeforeUnmount(() => {
   opacity: 0;
   transform: translateY(-50px);
   transition: transform 0.5s ease-in, opacity 0.3s ease-in;
+}
+
+.focused-link {
+  color: #3490dc; /* Change to your desired color */
 }
 
 .menu {

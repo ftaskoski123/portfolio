@@ -8,7 +8,7 @@
     </h3>
   </div>
   <!-- card look -->
-  <div class="my-8 mx-auto p-6 2xl:flex 2xl:mx-16 lg:mx-4 lg:flex bg-gray-100 rounded-xl">
+  <div class="my-8 mx-auto p-6 2xl:flex 2xl:mx-16 lg:mx-4 lg:flex shadow-2xl rounded-xl">
     <!-- project photo -->
     <div
       class="flex justify-center 2xl:w-[550px]  items-center rounded-2xl shadow-md"
