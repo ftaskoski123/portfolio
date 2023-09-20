@@ -8,7 +8,7 @@
     </h3>
   </div>
   <!-- card look -->
-  <div class="my-8 mx-auto p-6 2xl:flex 2xl:mx-16 lg:mx-4 lg:flex shadow-2xl rounded-xl">
+  <div class="my-8 mx-auto p-6 2xl:flex 2xl:mx-16 border  lg:mx-4 lg:flex shadow-2xl rounded-xl" data-aos="fade-up">
     <!-- project photo -->
     <div
       class="flex justify-center 2xl:w-[550px]  items-center rounded-2xl shadow-md"
@@ -32,7 +32,7 @@
   </div>
 
   <!-- card look -->
-  <div class="my-8 mx-auto p-6 2xl:flex 2xl:mx-16  bg-gray-100 rounded-xl">
+  <div class="my-8 mx-auto p-6 2xl:flex 2xl:mx-16 border  lg:mx-4 lg:flex shadow-2xl rounded-xl">
     <!-- project photo -->
     <div
       class="flex justify-center 2xl:w-[550px]  items-center rounded-2xl shadow-md"
@@ -42,7 +42,17 @@
       ></div>
     </div>
     
-    <p class="text-black text-center">Find A Coach</p>
+    <div class="text-center text-black 2xl:text-left">
+    <h3 class="font-black mt-4 2xl:mt-0 text-lg 2xl:text-md 2xl:ml-44 tracking-tighter">FIND A COACH 🧑‍🏫</h3>
+    <p class="2xl:mt-10 2xl:mx-6 font-bold leading-[1.6] text-gray-500 tracking-tight">
+      Welcome to the "Find a Coach" project, a platform where users can search for coaches in various fields such as frontend development, backend development, and career guidance. Whether you're looking to learn, improve your skills, or seek guidance in your career, this app helps you connect with experienced coaches.
+    </p>
+    <div class="flex gap-[1rem] justify-center mt-[1rem]">
+      <p class="border font-semibold shadow-lg py-2 px-6 tracking-tight">Vue</p>
+      <p class="border font-semibold  shadow-lg py-2 px-6 tracking-tight">Firebase</p>
+  </div>
+  </div>
+
   </div>
 
   <!-- card look -->
