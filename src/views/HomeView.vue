@@ -114,8 +114,7 @@
 
 <style scoped>
 .wavy-bubble {
-  @apply relative -translate-x-2/4 -translate-y-2/4 w-[15rem] h-[15rem] animate-[morph_8s_ease-in-out_infinite] bg-[url("../assets/slika.jpg")] bg-cover bg-center bg-no-repeat rounded-[50%] border-[3px] border-solid border-[#2d2e32] left-44 top-[140px] 2xl:w-[25rem] 2xl:h-[25rem];
-  @apply dark:border-white;
+  @apply relative -translate-x-2/4 -translate-y-2/4 w-[15rem] h-[15rem] animate-[morph_8s_ease-in-out_infinite] bg-[url("../assets/slika.jpg")] bg-cover bg-center bg-no-repeat rounded-[50%] border-[3px] border-solid border-[#2d2e32] left-44 top-[140px] 2xl:w-[25rem] 2xl:h-[25rem] dark:border-white;
 }
 
 @keyframes morph {
