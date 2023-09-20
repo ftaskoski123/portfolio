@@ -2,7 +2,7 @@
     <div class="px-4 py-24 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
   <div>
     <h3
-      class="flex justify-center  mt-12 text-2xl tracking-tight font-black font-serif  text-black dark:text-white"
+      class="flex justify-center mt-12 text-2xl tracking-tight font-black font-serif  text-black dark:text-white"
     >
     DROP A MESSAGE ! 🤙🏼
     </h3>
