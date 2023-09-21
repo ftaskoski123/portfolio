@@ -76,7 +76,8 @@
         type="checkbox"
         role="button"
         aria-label="Display the menu"
-        class="menu md:hidden"
+        class="menu md:hidden dark:outline-white"
+        :style="{ '--c': dark ? 'white' : 'black' }"
       />
 
       <transition name="fade-slide">
