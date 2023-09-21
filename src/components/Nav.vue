@@ -8,7 +8,7 @@
       </div>
       <button
         @click="toggleDark()"
-        class="px-2 py-2 text-white shadow-md transition-transform duration-500 ease-in-out hover:scale-105 bg-gray-700 dark:bg-white rounded-full absolute top-3 right-4"
+        class="px-2 py-2 text-white shadow-md transition-transform duration-500 ease-in-out hover:scale-105 bg-gray-700 dark:bg-white rounded-full absolute top-4 right-4"
       >
         <span v-if="dark">
           <svg
@@ -82,7 +82,7 @@
       <transition name="fade-slide">
         <ul
           v-if="mobileMenuOpen || linksVisible"
-          class="md:flex mt-5 md:items-center z-10 md:z-auto md:static fixed text-black bg-white w-screen h-screen left-0 md:w-auto py-2 pl-1 md:opacity-100 md:rounded-none md:mt-0"
+          class="md:flex mt-5 md:items-center z-10 md:z-auto md:static fixed text-black bg-white dark:bg-custom-dark dark:text-white w-screen h-screen left-0 md:w-auto py-2 pl-1 md:opacity-100 md:rounded-none md:mt-0"
         >
           <li class="mx-4 my-6 md:my-0">
             <router-link

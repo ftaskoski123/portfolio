@@ -1,10 +1,10 @@
 <template>
   <div
-    class="px-4 md:mt-80 lg:mt-28 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20 overflow-hidden"
+    class="px-4 md:mt-80 lg:mt-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8  overflow-hidden"
   >
     <div>
       <h3
-        class="flex justify-center 2xl:mt-[40rem] mt-12 text-2xl tracking-tight font-black font-serif text-black dark:text-white"
+        class="flex justify-center 2xl:mt-[20rem] mt-12 text-2xl tracking-tight font-black font-serif text-black dark:text-white"
       >
         MY WORK OF ART ! ⬇️
       </h3>
@@ -15,7 +15,6 @@
       data-aos="zoom-out-right"
       data-aos-mirror="false"
       data-aos-duration="1000"
-      data-aos-offset="200"
       data-aos-easing="ease-in-sine"
     >
       <!-- project photo -->
@@ -155,7 +154,7 @@
 
     <!-- card look -->
     <div
-      class="my-8 dark:border-gray-900 dark:bg-custom-dark dark:shadow-md mx-auto p-6 2xl:flex 2xl:mx-16 border 2xl:mt-[10rem] lg:mx-4 lg:flex shadow-2xl rounded-xl"
+      class="my-8 dark:border-gray-900 dark:bg-custom-dark dark:shadow-md mx-auto p-6 2xl:flex 2xl:mx-16 border 2xl:mt-[10rem] lg:mx-4 lg:flex shadow-xl rounded-xl"
       data-aos="zoom-out-left"
       data-aos-mirror="false"
       data-aos-duration="1000"
