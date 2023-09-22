@@ -54,7 +54,7 @@
           </p>
         </div>
         <div
-          class="items-center inline-block text-black dark:hover:text-blue-500 focus:text-blue-500 hover:text-blue-500 dark:text-slate-200 2xl:relative 2xl:mt-6 ml-20 mt-10"
+          class="items-center inline-block text-black dark:hover:text-blue-500 focus:text-blue-500 hover:text-blue-500 dark:text-slate-200 2xl:relative 2xl:mt-6 2xl:ml-20 mr-44 mt-10 md:mr-52"
         >
           <!-- Github -->
           <a
