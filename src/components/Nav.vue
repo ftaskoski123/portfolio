@@ -71,13 +71,38 @@
       </ul>
 
       <!--Phone-->
-      <input
+      <svg
+        v-if="linksVisible === false"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        class="w-8 h-8 font-bold md:hidden text-black dark:text-white"
         @click="toggleLinksVisibility"
-        type="checkbox"
-        role="button"
-        aria-label="Display the menu"
-        class="menu md:hidden"
-      />
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+        />
+      </svg>
+      <svg
+        v-else
+        @click="toggleLinksVisibility"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        class="w-8 h-8 md:hidden text-black dark:text-white"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M6 18L18 6M6 6l12 12"
+        />
+      </svg>
 
       <transition name="fade-slide">
         <ul
@@ -207,69 +232,4 @@ onBeforeUnmount(() => {
   color: #3490dc; /* Change to your desired color */
 }
 
-.menu {
-  --s: 30px; /* control the size */
-  --c: black; /* the color */
-
-  height: var(--s);
-  aspect-ratio: 1;
-  border: none;
-  padding: 0;
-  border-inline: calc(var(--s) / 2) solid #0000;
-  box-sizing: content-box;
-  --_g1: linear-gradient(var(--c) 20%, #0000 0 80%, var(--c) 0) no-repeat
-    content-box border-box;
-  --_g2: radial-gradient(circle closest-side at 50% 12.5%, var(--c) 95%, #0000)
-    repeat-y content-box border-box;
-  background: var(--_g2) left var(--_p, 0px) top,
-    var(--_g1) left calc(var(--s) / 10 + var(--_p, 0px)) top,
-    var(--_g2) right var(--_p, 0px) top,
-    var(--_g1) right calc(var(--s) / 10 + var(--_p, 0px)) top;
-  background-size: 20% 80%, 40% 100%;
-  position: relative;
-  clip-path: inset(0 25%);
-  -webkit-mask: linear-gradient(90deg, #0000, #000 25% 75%, #0000);
-  cursor: pointer;
-  transition: background-position 0.3s var(--_s, 0.3s),
-    clip-path 0s var(--_s, 0.6s);
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-}
-.menu:before,
-.menu:after {
-  content: "";
-  position: absolute;
-  border-radius: var(--s);
-  inset: 40% 0;
-  background: var(--c);
-  transition: transform 0.3s calc(0.3s - var(--_s, 0.3s));
-}
-
-.menu:checked {
-  clip-path: inset(0);
-  --_p: calc(-1 * var(--s));
-  --_s: 0s;
-}
-.menu:checked:before {
-  transform: rotate(45deg);
-}
-.menu:checked:after {
-  transform: rotate(-45deg);
-}
-.menu:focus-visible {
-  clip-path: none;
-  -webkit-mask: none;
-  border: none;
-  outline: 2px solid var(--c);
-  outline-offset: 5px;
-}
-.menu-open {
-  transform: rotate(45deg);
-}
-
-/* Styles for the closed menu icon (hamburger shape) */
-.menu-closed {
-  transform: rotate(0deg);
-}
 </style>
