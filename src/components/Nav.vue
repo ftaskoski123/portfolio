@@ -42,7 +42,7 @@
         viewBox="0 0 24 24"
         stroke-width="1.5"
         stroke="currentColor"
-        class="w-8 h-8 font-bold md:hidden text-black dark:text-white"
+        class="w-8 h-8 font-bold md:hidden text-black dark:text-white cursor-pointer"
         @click="toggleLinksVisibility"
       >
         <path
@@ -59,7 +59,7 @@
         viewBox="0 0 24 24"
         stroke-width="1.5"
         stroke="currentColor"
-        class="w-8 h-8 md:hidden text-black dark:text-white"
+        class="w-8 h-8 md:hidden text-black dark:text-white cursor-pointer"
       >
         <path
           stroke-linecap="round"
@@ -106,12 +106,9 @@
 
 <script setup lang="ts">
 import { onBeforeUnmount, onMounted, ref } from "vue";
-import { useDark, useToggle } from "@vueuse/core";
 import { useRouter } from "vue-router";
 import toggleMode from "./toggleMode.vue";
 const router = useRouter();
-const dark = useDark();
-const toggleDark = useToggle(dark);
 
 const mobileMenuOpen = ref<boolean>(false);
 const linksVisible = ref<boolean>(false);
@@ -154,7 +151,7 @@ function toggleLinksVisibility(): void {
 
 function closeLinksOnResize() {
   if (window.innerWidth > 768) {
-    linksVisible.value = false;
+    mobileMenuOpen.value = false;
   }
 }
 function scrollToProjectsMobile(): void {
@@ -195,7 +192,7 @@ onBeforeUnmount(() => {
 }
 
 .focused-link {
-  color: #3490dc; /* Change to your desired color */
+  color: #3490dc;
 }
 
 </style>
