@@ -72,7 +72,7 @@
 
       <!--Phone-->
       <svg
-        v-if="linksVisible === false"
+        v-if="!linksVisible"
         xmlns="http://www.w3.org/2000/svg"
         fill="none"
         viewBox="0 0 24 24"
