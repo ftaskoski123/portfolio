@@ -104,6 +104,7 @@
         />
       </svg>
 
+
       <transition name="fade-slide">
         <ul
           v-if="mobileMenuOpen || linksVisible"
