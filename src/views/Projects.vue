@@ -9,98 +9,18 @@
         MY WORK OF ART ! ⬇️
       </h3>
     </div>
-    <!-- card look -->
-    <Card data-aos="zoom-out-right">
-      <!-- project photo -->
-      <div
-        class="flex justify-center 2xl:w-[550px] items-center rounded-2xl shadow-md"
-      >
-        <div
-          class="h-[350px] w-[550px] rounded-2xl bg-black transition-transform hover-transition ease-in-out bg-[url('@/assets/ss.png')] bg-cover bg-top hover:bg-bottom"
-        ></div>
-      </div>
+    <div v-for="(project, index) in projects" :key="index">
+      <Card :data-aos="project.animation">
+        <projectPhoto :image="project.image" />
 
-      <projectDescription
-        :title="'Find a Coach 🧑‍🏫'"
-        :description="`Welcome to the 'Find a Coach' project, a platform where users can
-          search for coaches in various fields such as frontend development,
-          backend development, and career guidance. Whether you're looking to
-          learn, improve your skills, or seek guidance in your career, this app
-          helps you connect with experienced coaches.`"
-        :technology1="'Vue'"
-        :technology2="'Firebase'"
-      />
-    </Card>
-
-    <!-- card look -->
-    <Card>
-      <!-- project photo -->
-      <div
-        class="flex justify-center 2xl:w-[550px] items-center rounded-2xl shadow-md"
-      >
-        <div
-          class="h-[350px] w-[550px] rounded-2xl bg-black transition-transform hover-transition ease-in-out bg-[url('@/assets/ss.png')] bg-cover bg-top hover:bg-bottom"
-        ></div>
-      </div>
-
-      <projectDescription
-        :title="'Find a Coach 🧑‍🏫'"
-        :description="`Welcome to the 'Find a Coach' project, a platform where users can
-          search for coaches in various fields such as frontend development,
-          backend development, and career guidance. Whether you're looking to
-          learn, improve your skills, or seek guidance in your career, this app
-          helps you connect with experienced coaches.`"
-        :technology1="'Vue'"
-        :technology2="'Firebase'"
-      />
-    </Card>
-
-    <!-- card look -->
-    <Card data-aos="zoom-out-right">
-      <!-- project photo -->
-      <div
-        class="flex justify-center 2xl:w-[550px] items-center rounded-2xl shadow-md"
-      >
-        <div
-          class="h-[350px] w-[550px] rounded-2xl bg-black transition-transform hover-transition ease-in-out bg-[url('@/assets/ss.png')] bg-cover bg-top hover:bg-bottom"
-        ></div>
-      </div>
-
-      <projectDescription
-        :title="'Find a Coach 🧑‍🏫'"
-        :description="`Welcome to the 'Find a Coach' project, a platform where users can
-          search for coaches in various fields such as frontend development,
-          backend development, and career guidance. Whether you're looking to
-          learn, improve your skills, or seek guidance in your career, this app
-          helps you connect with experienced coaches.`"
-        :technology1="'Vue'"
-        :technology2="'Firebase'"
-      />
-    </Card>
-
-
-    <!-- card look -->
-    <Card>
-      <!-- project photo -->
-      <div
-        class="flex justify-center 2xl:w-[550px] items-center rounded-2xl shadow-md"
-      >
-        <div
-          class="h-[350px] w-[550px] rounded-2xl bg-black transition-transform hover-transition ease-in-out bg-[url('@/assets/ss.png')] bg-cover bg-top hover:bg-bottom"
-        ></div>
-      </div>
-
-      <projectDescription
-        :title="'Find a Coach 🧑‍🏫'"
-        :description="`Welcome to the 'Find a Coach' project, a platform where users can
-          search for coaches in various fields such as frontend development,
-          backend development, and career guidance. Whether you're looking to
-          learn, improve your skills, or seek guidance in your career, this app
-          helps you connect with experienced coaches.`"
-        :technology1="'Vue'"
-        :technology2="'Firebase'"
-      />
-    </Card>
+        <projectDescription
+          :title="project.title"
+          :description="project.description"
+          :technology1="project.technology1"
+          :technology2="project.technology2"
+        />
+      </Card>
+    </div>
   </div>
 </template>
 
@@ -113,4 +33,24 @@
 <script setup>
 import Card from "../components/Card.vue";
 import projectDescription from "../components/projectDescription.vue";
+import projectPhoto from "../components/projectPhoto.vue";
+import { onMounted, ref } from "vue";
+import axios from "axios";
+
+const projects = ref([]);
+
+async function getData() {
+  try {
+    const response = await axios.get(
+      "https://projects-1ac60-default-rtdb.firebaseio.com/projects.json"
+    );
+    projects.value = response.data;
+  } catch (error) {
+    console.error("Error fetching data:", error);
+  }
+}
+
+onMounted(() => {
+  getData();
+});
 </script>

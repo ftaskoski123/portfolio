@@ -139,4 +139,8 @@
 <script setup>
 import Projects from './Projects.vue';
 import Contact from './Contact.vue';
+import axios from "axios";
+
+
+
 </script>
