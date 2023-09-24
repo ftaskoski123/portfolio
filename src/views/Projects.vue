@@ -18,6 +18,8 @@
           :description="project.description"
           :technology1="project.technology1"
           :technology2="project.technology2"
+          :githublink="project.githublink"
+          :livedemo="project.livedemo"
         />
       </Card>
     </div>

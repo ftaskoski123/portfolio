@@ -22,14 +22,14 @@
           {{ technology2 }}
           </p>
         </div>
-        <codeLink :link="'https://github.com/ftaskoski123/find-a-coach'"/>
+        <projectLinks  :githublink="githublink" :livedemo="livedemo" />
       </div>
   </template>
   
   <script setup>
 import { defineProps } from "vue";
 
-import codeLink from "../components/codeLink.vue";
+import projectLinks from "../components/projectLinks.vue";
 
 defineProps({
   title: {
@@ -48,6 +48,15 @@ defineProps({
     type: String,
     required: true,
   },
+  githublink: {
+    type: String,
+    required: true,
+  },
+  livedemo: {
+    type: String,
+    required: true,
+  },
+  
 });
   
   </script>
