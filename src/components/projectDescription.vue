@@ -27,7 +27,6 @@
   </template>
   
   <script setup>
-import { defineProps } from "vue";
 
 import projectLinks from "../components/projectLinks.vue";
 
