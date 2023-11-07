@@ -5,7 +5,7 @@
     <div class="2xl:ml-[7rem] 2xl:mt-40">
       <div class="2xl:flex  2xl:text-left">
       <h3 class="text-4xl sm:text-6xl  font-semibold text-black dark:text-white">
-        Front-End
+        Front-End 
       </h3>
       <h3 class="text-4xl sm:text-6xl text font-semibold text-black dark:text-white">
         <span class="vue-icon ml-4 mr-4 font-semibold">Vue</span>
@@ -114,7 +114,7 @@
 
 <style scoped>
 .wavy-bubble {
-  @apply relative -translate-x-2/4 -translate-y-2/4 w-[15rem] h-[15rem] animate-[morph_8s_ease-in-out_infinite] bg-[url("../assets/slika.jpg")] bg-cover bg-center bg-no-repeat rounded-[50%] border-[3px] border-solid border-[#2d2e32] left-44 top-[140px] 2xl:w-[25rem] 2xl:h-[25rem] dark:border-white;
+  @apply relative -translate-x-2/4 -translate-y-2/4 w-[15rem] h-[15rem] animate-[morph_8s_ease-in-out_infinite] bg-[url("../assets/pic.jpg")] bg-cover bg-center bg-no-repeat rounded-[50%] border-[3px] border-solid border-[#2d2e32] left-44 top-[140px] 2xl:w-[25rem] 2xl:h-[25rem] dark:border-white;
 }
 
 @keyframes morph {
@@ -139,7 +139,6 @@
 <script setup>
 import Projects from './Projects.vue';
 import Contact from './Contact.vue';
-import axios from "axios";
 
 
 
