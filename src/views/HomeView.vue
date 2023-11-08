@@ -16,7 +16,7 @@
       </h3>
     </div>
     <div class="relative 2xl:absolute">
-      <div class="wavy-bubble 2xl:ml-[50rem] md:ml-20 lg:ml-64 2xl:mt-[-8rem]"></div>
+      <div class="wavy-bubble 2xl:ml-[50rem] ml-[-20px] md:ml-20 lg:ml-64 2xl:mt-[-8rem]"></div>
     </div>
   </main>
   <p

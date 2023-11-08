@@ -1,5 +1,5 @@
 <template>
-  <div class="flex items-center space-x-4 mt-10 justify-center">
+  <div class="flex items-center space-x-4 mt-10 justify-center dark:text-white">
     <a :href="githublink" target="_blank" class="flex items-center hover:text-blue-500">
       <p class="mr-2 text-2xl">Code</p>
       <svg
