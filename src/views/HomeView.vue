@@ -15,9 +15,9 @@
         Developer
       </h3>
     </div>
-    <div class="relative 2xl:absolute">
-      <div class="wavy-bubble 2xl:ml-[50rem] ml-[-20px] md:ml-20 lg:ml-64 2xl:mt-[-8rem]"></div>
-    </div>
+    <div class="relative 2xl:absolute flex items-center justify-center">
+  <div class="wavy-bubble 2xl:ml-[50rem] ml-[-25%] md:ml-[-20%] lg:ml-[-15%] xl:ml-[-10%]"></div>
+</div>
   </main>
   <p
     class="text-black text-base leading-[1.6] dark:text-slate-100 mt-8 mr-2 2xl:ml-[8rem] text-center 2xl:text-left  "
@@ -139,7 +139,5 @@
 <script setup>
 import Projects from './Projects.vue';
 import Contact from './Contact.vue';
-
-
 
 </script>
