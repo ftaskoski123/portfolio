@@ -3,27 +3,27 @@
 <div class="px-4 py-16 mt-20 mx-auto sm:max-w-xl md:max-w-full  lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
   <main class="text-center p-4">
     <div class="2xl:ml-[7rem] 2xl:mt-40">
-      <div class="2xl:flex  2xl:text-left">
-      <h3 class="text-4xl sm:text-6xl  font-semibold text-black dark:text-white">
-        Front-End 
-      </h3>
-      <h3 class="text-4xl sm:text-6xl text font-semibold text-black dark:text-white">
-        <span class="vue-icon ml-4 mr-4 font-semibold">Vue</span>
-      </h3>
-    </div>
-      <h3 class="text-4xl sm:text-6xl 2xl:text-left font-semibold text-black dark:text-white">
+      <div class="2xl:flex 2xl:text-left">
+          <h3 class="text-4xl sm:text-6xl font-semibold text-black dark:text-white">
+            Full-Stack
+          </h3>
+          <h3 class="text-4xl sm:text-6xl text font-semibold text-black dark:text-white">
+            <span class="vue-icon ml-2 font-semibold">Vue</span>
+            and
+            <span class="dotnet-icon font-semibold">.NET</span>
+          </h3>
+        </div>
+      <h3 class="text-4xl sm:text-6xl 2xl:text-left  font-semibold text-black dark:text-white">
         Developer
       </h3>
     </div>
     <div class="relative 2xl:absolute flex items-center justify-center">
-  <div class="wavy-bubble 2xl:ml-[50rem] ml-[-25%] md:ml-[-20%] lg:ml-[-15%] xl:ml-[-10%]"></div>
+  <div class="wavy-bubble 2xl:ml-[52rem] ml-[-25%] md:ml-[-20%] lg:ml-[-15%] xl:ml-[-10%]"></div>
 </div>
   </main>
-  <p
-    class="text-black text-base leading-[1.6] dark:text-slate-100 mt-8 mr-2 2xl:ml-[8rem] text-center 2xl:text-left  "
-  >
-  Hello! I'm a Front-End Vue.js Developer hailing from Skopje, Macedonia.<br> With a passion for crafting user-friendly and visually appealing web applications,<br> I thrive in the world of front-end development.In my role as a Front-End Vue Developer, <br>I am dedicated to creating seamless and engaging user experiences.<br> Whether it's designing responsive and intuitive interfaces, optimizing web performance,<br> or troubleshooting cross-browser compatibility issues, I'm always up for the challenge.
-  </p>
+  <p class="text-black text-base leading-[1.6] dark:text-slate-100 mt-8 mr-2 2xl:ml-[8rem] text-center 2xl:text-left">
+      Hello! I'm a Full-Stack Vue.js and .NET Developer hailing from Skopje, Macedonia.<br> With a passion for crafting user-friendly and visually appealing web applications,<br> I thrive in the world of front-end and back-end development. In my role as a Full-Stack Developer, <br>I am dedicated to creating seamless and engaging user experiences.<br> Whether it's designing responsive and intuitive interfaces, optimizing web performance,<br> or troubleshooting cross-browser compatibility issues, I'm always up for the challenge.
+    </p>
 
   <!-- SVG's-->
   <div class="text-black dark:text-slate-200 flex justify-center 2xl:relative items-center 2xl:mt-6 mr-3 mt-10 2xl:mr-[55rem]">
@@ -101,6 +101,10 @@
         class="transition-transform duration-500 ease-in-out hover:scale-105 mb-4 mx-2"
         src="https://skillicons.dev/icons?i=tailwind"
       />
+      <img
+        class="transition-transform duration-500 ease-in-out hover:scale-105 mb-4 mx-2"
+        src="https://skillicons.dev/icons?i=net,cs"
+      />
     </div>
   </div>
 </div>
@@ -131,6 +135,12 @@
 
 .vue-icon {
   background-image: linear-gradient(to bottom, #41b883, #34495e);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.dotnet-icon {
+  background-image: linear-gradient(to bottom, #512bd4, #008ed8);
   -webkit-background-clip: text;
   color: transparent;
 }
