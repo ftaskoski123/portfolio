@@ -19,7 +19,7 @@
         ></path>
       </svg>
     </a>
-    <a :href="livedemo" target="_blank" class="flex items-center cursor-pointer hover:text-blue-500">
+    <a v-if="livedemo" :href="livedemo" target="_blank" class="flex items-center cursor-pointer hover:text-blue-500">
       <p class="mr-2 text-xl">Live Demo</p>
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -44,7 +44,6 @@
 </template>
 
 <script setup>
-
 defineProps({
   githublink: {
     type: String,
@@ -52,7 +51,7 @@ defineProps({
   },
   livedemo: {
     type: String,
-    required: true,
+    required: false,
   },
 
 });
