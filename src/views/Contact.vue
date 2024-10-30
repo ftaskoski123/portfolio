@@ -57,7 +57,7 @@
   <p
     class="text-[#555] text-base font-medium leading-[1.6] dark:text-white mt-2 mr-2 text-center"
   >
- filip.taskoski77@gmail.com<br />
+ taskoskif@gmail.com<br />
   </p>
 </div>
 </template>
