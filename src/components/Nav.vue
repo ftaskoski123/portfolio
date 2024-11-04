@@ -13,6 +13,7 @@
             to=""
             @click="scrollToTop"
             class="hover:text-blue-500 cursor-pointer duration-500 focus:text-blue-500"
+            :class="{ 'text-blue-500': $route.hash === '#home' }"
             >HOME</router-link
           >
         </li>
@@ -21,6 +22,7 @@
             to=""
             @click="scrollToProjects"
             class="hover:text-blue-500 cursor-pointer duration-500 focus:text-blue-500"
+            :class="{ 'text-blue-500': $route.hash === '#projects' }"
             >PROJECTS</router-link
           >
         </li>
@@ -29,6 +31,7 @@
             to=""
             @click="scrollToContact"
             class="hover:text-blue-500 cursor-pointer duration-500 focus:text-blue-500"
+            :class="{ 'text-blue-500': $route.hash === '#contact' }"
             >CONTACT</router-link
           >
         </li>
@@ -79,6 +82,7 @@
               to=""
               @click="scrollToTopMobile"
               class="text-xl focus:text-blue-500 hover:text-blue-500 duration-500"
+              :class="{ 'text-blue-500': $route.hash === '#home' }"
               >HOME</router-link
             >
           </li>
@@ -87,6 +91,7 @@
               to=""
               @click="scrollToProjectsMobile"
               class="text-xl focus:text-blue-500 hover:text-blue-500 duration-500"
+              :class="{ 'text-blue-500': $route.hash === '#projects' }"
               >PROJECTS</router-link
             >
           </li>
@@ -95,6 +100,7 @@
               to=""
               @click="scrollToContactMobile"
               class="text-xl focus:text-blue-500 hover:text-blue-500 duration-500"
+              :class="{ 'text-blue-500': $route.hash === '#contact' }"
               >CONTACT</router-link
             >
           </li>
