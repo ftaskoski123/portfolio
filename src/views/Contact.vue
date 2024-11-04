@@ -62,11 +62,3 @@
 </div>
 </template>
 
-<style scoped>
-@supports (-webkit-overflow-scrolling: touch) {
-  header {
-    position: fixed;
-    top: 0;
-  }
-}
-</style>

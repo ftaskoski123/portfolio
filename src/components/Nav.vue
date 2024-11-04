@@ -201,4 +201,11 @@ onBeforeUnmount(() => {
   color: #3490dc;
 }
 
+@supports (-webkit-overflow-scrolling: touch) {
+  header {
+    position: fixed;
+    top: 0;
+  }
+}
+
 </style>
